@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseCommand.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/BaseEvent.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/LogConsole.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/Language.js"></script>
+    <script language="JavaScript" type="text/javascript" src="Scripts/custom.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="maincontents.js"></script>
+    <script src="boots/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="boots/css/bootstrap.min.css">
+    
+    <link href="css/Main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+
+<body  onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+  <header onclick="">
+    
+</header>
+  <section class="main-content" style="padding-top: 150px;">
+    <div class="bmg">
+      <div class="wrap" >
+        <h1 class="welcome-text">WELCOME<br></h1>
+        <div class="get-started">Get Started</div>
+        
+        <div class="slider-box" style="display: none;">
+          <img src="images/Slide1.png" name="pic1" width="1080">
+          <div class="slider-nav">
+            <a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a><a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
+          </div>  
+        </div>
+        
+                        
+      </div>
+    </div>
+  </section>
+<script>
+    var i=1,j=0;
+    function change(j){
+        i=i+j;
+        if(i>26){
+          
+          i=1;
+        }
+
+        if(i<=0){
+          i=26;
+        }
+        document.pic1.src="images/Slide" + i + ".png";
+        //alert(i);
+        PlaySpeech(speech[i]);   
+
+    }
+    </script>
+</body>
+</html>
