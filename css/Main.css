@@ -19,7 +19,7 @@ a{
 body{
 	padding: 0;
 	margin: 0;
-	background-image: url("../assets/background.png");
+	
 	background-repeat: no-repeat;
 	width: 1080px;
 	height: 1920px;
@@ -191,6 +191,7 @@ a.button {
     top: 687px;
     left: 400px;
     font-family: MyriadproBold;
+    color: black;
 }
 .get-started {
     position: absolute;

@@ -91,7 +91,7 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Contents/Dance/index.html";
             break;
         case "Config":
-            if(conf_count === 5)
+            if(conf_count === 2)
             {
                 conf_count = 0;
                 location.href = "Config/Config.htm";

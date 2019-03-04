@@ -20,9 +20,11 @@
 
 <body  onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
   <header onclick="">
-    
+    <div class="config" onclick="FC_ContentsCall('Config')">
+        <img src="assets/config.png" height="100">
+    </div>
 </header>
-  <section class="main-content" style="padding-top: 150px;">
+  <section class="main-content" style="padding-top: 340px;">
     <div class="bmg">
       <div class="wrap" >
         <h1 class="welcome-text">WELCOME<br></h1>
@@ -54,7 +56,6 @@
         document.pic1.src="images/Slide" + i + ".png";
         //alert(i);
         PlaySpeech(speech[i]);   
-
     }
     </script>
 </body>
