@@ -151,7 +151,7 @@ function OnJoystickControlled(strPara){
     if(btn_info[0] == '1'){
            // window.external.ChangeLanguage("en-us");
             SetVolume(1);
-            window.external.PlaySpeech("");//I'm here to assist you, press any button on my screen to begin");
+            window.external.PlaySpeech("Hi Jayden, Elyas, Shilo, Annalease and Ellianna.   It's great to meet you, you have a really cool dad!  He's very nice.  Just like you I'm sure!");//I'm here to assist you, press any button on my screen to begin");
           
     }
 
