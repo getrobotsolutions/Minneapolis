@@ -42,6 +42,24 @@
     </div>
   </section>
 <script>
+  $(document).ready(function(){
+    $(document).keydown(function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      //if(code === 13)// Enter key hit
+      if (e.keyCode == 37) {// Left arrow key hit
+          //alert('left clicked');
+          change(-1);
+      }
+    });
+    $(document).keydown(function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      if (e.keyCode == 39) {//Right arrow key hit
+          //alert('rightclick');
+          change(1);
+      }
+    });
+  });
+
     var i=1,j=0;
     function change(j){
         i=i+j;
