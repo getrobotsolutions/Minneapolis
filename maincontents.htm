@@ -31,7 +31,7 @@
         <div class="get-started">Get Started</div>
         
         <div class="slider-box" style="display: none;">
-          <img src="images/Slide1.png" id="pic1" name="pic1" width="1080">
+          <img src="" id="pic1" name="pic1" width="1080">
           <div class="slider-nav">
             <a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a><a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
           </div>  
@@ -71,9 +71,9 @@
         }
         else if(i===1){
           PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
+          document.pic1.src="images/Slide3.png";
           setTimeout(function() {
-            pic1.style.visibility="visible";
+            //pic1.style.visibility="visible";
             document.pic1.src="images/Slide" + i + ".png";
           }, 11000);          
           return;
@@ -187,11 +187,14 @@
           PlaySpeech(speech[i]);//var pic=
           document.pic1.src="images/Slide3.png";
           setTimeout(function() {
-            document.pic1.src="images/Slide" + i + ".gif";
-          }, 550000);  
+            document.pic1.src="images/Slide21.png";
+          }, 21000);
+          setTimeout(function() {
+            document.pic1.src="images/Slide9.png";
+          }, 55000);  
           return
         }
-        /*else if(i===22){
+        else if(i===22){
           PlaySpeech(speech[i]);//var pic=
           pic1.style.visibility = "hidden";
           setTimeout(function() {
@@ -200,7 +203,7 @@
           }, 3000);          
           return;
         }
-        else if(i===23){
+        /*else if(i===23){
           PlaySpeech(speech[i]);//var pic=
           pic1.style.visibility = "hidden";
           setTimeout(function() {
@@ -213,7 +216,7 @@
         
         document.pic1.src="images/Slide" + i + ".png";
         //alert(i);
-        PlaySpeech(speech[i]);   
+        //PlaySpeech(speech[i]);   
     }
     </script>
 </body>
