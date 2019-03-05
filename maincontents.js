@@ -138,8 +138,13 @@ $(document).ready(function(){
     $('.get-started').click(function(){
         $('.welcome-text, .get-started').hide();
         $('.slider-box').show();
+        $('#pic1').hide();
+        //pic1.style.visibility = "hidden";
+          setTimeout(function() {
+           $('#pic1').show();
+            document.pic1.src="images/Slide1.png";
+          }, 11000);   
         PlaySpeech(speech[1]);
-
     });
 })
 
