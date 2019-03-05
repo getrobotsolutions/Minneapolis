@@ -31,7 +31,7 @@
         <div class="get-started">Get Started</div>
         
         <div class="slider-box" style="display: none;">
-          <img src="images/Slide1.png" name="pic1" width="1080">
+          <img src="images/Slide1.png" id="pic1" name="pic1" width="1080">
           <div class="slider-nav">
             <a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a><a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
           </div>  
@@ -59,7 +59,7 @@
       }
     });
   });
-
+ var pic1=document.getElementById("pic1");
     var i=1,j=0;
     function change(j){
         i=i+j;
@@ -67,10 +67,79 @@
           
           i=1;
         }
-
-        if(i<=0){
+        else if(i<=0){
           i=26;
         }
+        else if(i===1){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 11000);          
+          return;
+        }
+        else if(i===3){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 4000);          
+          return;
+        }
+        else if(i===4){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 14000);          
+          return;
+        }
+        else if(i===5){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 9000);          
+          return;
+        }
+        else if(i===6){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 12000);          
+          return;
+        }
+        else if(i===7){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 8000);          
+          return;
+        }
+        else if(i===8){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 3000);          
+          return;
+        }
+        else if(i===20){
+          document.pic1.src="images/Slide" + i + ".gif";
+          PlaySpeech(speech[i]);   
+          return
+        }
+
+        
         document.pic1.src="images/Slide" + i + ".png";
         //alert(i);
         PlaySpeech(speech[i]);   
