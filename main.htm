@@ -19,64 +19,207 @@
 
 
 <body  onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
-
-<header onclick="">
+  <header onclick="">
     <div class="config" onclick="FC_ContentsCall('Config')">
         <img src="assets/config.png" height="100">
     </div>
-    <div class="img-home" onclick="location.href ='maincontents.htm'"></div>
-
 </header>
-<section class="main-content">
-  <!--<h1 class="welcome-text">WELCOME</br>TO NOVARTIS</h1>
-  <div class="get-started">Get Started</div>-->
-
-  <div class="navigation">
-    <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('MatchGame')">
-      <img src="assets/icons/game.png" class="navigation-icon">
+  <section class="main-content" style="padding-top: 340px;">
+    <div class="bmg">
+      <div class="wrap" >
+        <h1 class="welcome-text">WELCOME<br></h1>
+        <div class="get-started">Get Started</div>
+        
+        <div class="slider-box" style="display: none;">
+          <img src="" id="pic1" name="pic1" width="1080">
+          <div class="slider-nav">
+            <a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a><a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
+          </div>  
+        </div>
+        
+                        
+      </div>
     </div>
-    <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('Selfie')">
-      <img src="assets/icons/selfie.png" class="navigation-icon">
-      
-    </div>
-    <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('Videos')">
-      <img src="assets/icons/videos.png" class="navigation-icon">
-      
-    </div>
-    <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('Dancer')">
-      <img src="assets/icons/robot-dancer.png" class="navigation-icon">
-      
-    </div>
-    <!--<div class="col-sm-6 navigation-box" style="background-color: #023761" onclick="FC_ContentsCall('Dance')">
-      <img src="assets/icons/dance.png" class="navigation-icon">
-      <h2 class="navigation-text">DANCE WITH THE ROBOT</h2>
-    </div>-->
-    <div class="col-sm-12 navigation-box" style="" onclick="FC_ContentsCall('Take-a-selfie')">
-      <img src="assets/icons/take-a-selfie.png" class="navigation-icon">
-      
-    </div>
-    <!--<div class="col-sm-6 navigation-box" style="" onclick="FC_ContentsCall('go-mobile')">
-      <img src="assets/icons/go-mobile.png" class="navigation-icon ">
-      
-    </div>-->
-     <img src="assets/go-mobile.png" style="position: absolute; top: 1785px;right: 10px;" onclick="FC_ContentsCall('go-mobile')" width="200">
-  </div>
+  </section>
+<script>
+  $(document).ready(function(){
+    $(document).keydown(function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      //if(code === 13)// Enter key hit
+      if (e.keyCode == 37) {// Left arrow key hit
+          //alert('left clicked');
+          change(-1);
+      }
+    });
+    $(document).keydown(function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      if (e.keyCode == 39) {//Right arrow key hit
+          //alert('rightclick');
+          change(1);
+      }
+    });
+  });
+ var pic1=document.getElementById("pic1");
+    var i=1,j=0;
+    function change(j){
+        i=i+j;
+        if(i>26){
+          i=1;
+        }
+        else if(i<=0){
+          i=26;
+        }
+        else if(i===1){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide3.png";
+          setTimeout(function() {
+            //pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 11000);          
+          return;
+        }
+        else if(i===3){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 4000);          
+          return;
+        }
+        else if(i===4){
+          PlaySpeech(speech[i]);//var pic=
+          //pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            //pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 14000);          
+          return;
+        }
+        else if(i===5){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide3.png";
+          //pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            //pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 11000);
+          setTimeout(function() {
+            //pic1.style.visibility="visible";
+            document.pic1.src="images/Slide3.png";
+          }, 15000);          
+          return;
+        }
+        else if(i===6){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide3.png";
+          //pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            //pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 12000);          
+          return;
+        }
+        else if(i===7){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide3.png";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 8000);          
+          return;
+        }
+        else if(i===8){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 3000);          
+          return;
+        }
+        else if(i===9){
+          PlaySpeech(speech[i]);//var pic=
+          //pic1.style.visibility = "hidden";
+          document.pic1.src="images/Slide8.png";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 14000);          
+          return;
+        }
+        else if(i===10){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 3000);
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide12.png";
+          }, 6000);          
+          return;
+        }
+        else if(i===11){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide12.png";         
+          return;
+        }
+        else if(i===18){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide12.png";//pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 25000);          
+          return;
+        }
+        else if(i===20){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
 
+            document.pic1.src="images/Slide" + i + ".gif";
+            pic1.style.visibility="visible";
+          }, 10000);  
+          return
+        }
+        else if(i===21){
+          PlaySpeech(speech[i]);//var pic=
+          document.pic1.src="images/Slide3.png";
+          setTimeout(function() {
+            document.pic1.src="images/Slide21.png";
+          }, 21000);
+          setTimeout(function() {
+            document.pic1.src="images/Slide9.png";
+          }, 55000);  
+          return
+        }
+        else if(i===22){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 3000);          
+          return;
+        }
+        /*else if(i===23){
+          PlaySpeech(speech[i]);//var pic=
+          pic1.style.visibility = "hidden";
+          setTimeout(function() {
+            pic1.style.visibility="visible";
+            document.pic1.src="images/Slide" + i + ".png";
+          }, 3000);          
+          return;
+        }*/
 
-  <footer>
-   
-  </footer>
-</section>
-
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
-
-</div>
-<script type="text/javascript">
-  if (!readCookie("NavigationState")) {
-    writeCookie("NavigationState", true, 30);
-  }
-
-</script>
+        
+        document.pic1.src="images/Slide" + i + ".png";
+        //alert(i);
+        PlaySpeech(speech[i]);   
+    }
+    </script>
 </body>
 </html>

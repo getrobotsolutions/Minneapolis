@@ -23,203 +23,27 @@
     <div class="config" onclick="FC_ContentsCall('Config')">
         <img src="assets/config.png" height="100">
     </div>
-</header>
+  </header>
   <section class="main-content" style="padding-top: 340px;">
     <div class="bmg">
       <div class="wrap" >
-        <h1 class="welcome-text">WELCOME<br></h1>
-        <div class="get-started">Get Started</div>
-        
-        <div class="slider-box" style="display: none;">
-          <img src="" id="pic1" name="pic1" width="1080">
-          <div class="slider-nav">
-            <a href="#" class="" onclick="change(-1)"><img src="images/previous.png"></a><a href="#" class="" onclick="change(1)"><img src="images/next.png"></a>
-          </div>  
-        </div>
-        
-                        
+        <h1 class="welcome-text"></h1>
+        <div class="" style="padding:20px 10px;">
+          <img src="images/Rosedale-Center-Logo.png" width="1060" onclick="location.href='main.htm'">
+        </div>                      
       </div>
     </div>
   </section>
-<script>
-  $(document).ready(function(){
-    $(document).keydown(function(e) {
-      var code = (e.keyCode ? e.keyCode : e.which);
-      //if(code === 13)// Enter key hit
-      if (e.keyCode == 37) {// Left arrow key hit
-          //alert('left clicked');
-          change(-1);
-      }
-    });
-    $(document).keydown(function(e) {
-      var code = (e.keyCode ? e.keyCode : e.which);
-      if (e.keyCode == 39) {//Right arrow key hit
-          //alert('rightclick');
-          change(1);
-      }
-    });
-  });
- var pic1=document.getElementById("pic1");
-    var i=1,j=0;
-    function change(j){
-        i=i+j;
-        if(i>26){
-          i=1;
-        }
-        else if(i<=0){
-          i=26;
-        }
-        else if(i===1){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide3.png";
-          setTimeout(function() {
-            //pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 11000);          
-          return;
-        }
-        else if(i===3){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 4000);          
-          return;
-        }
-        else if(i===4){
-          PlaySpeech(speech[i]);//var pic=
-          //pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            //pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 14000);          
-          return;
-        }
-        else if(i===5){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide3.png";
-          //pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            //pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 11000);
-          setTimeout(function() {
-            //pic1.style.visibility="visible";
-            document.pic1.src="images/Slide3.png";
-          }, 15000);          
-          return;
-        }
-        else if(i===6){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide3.png";
-          //pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            //pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 12000);          
-          return;
-        }
-        else if(i===7){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide3.png";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 8000);          
-          return;
-        }
-        else if(i===8){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 3000);          
-          return;
-        }
-        else if(i===9){
-          PlaySpeech(speech[i]);//var pic=
-          //pic1.style.visibility = "hidden";
-          document.pic1.src="images/Slide8.png";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 14000);          
-          return;
-        }
-        else if(i===10){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 3000);
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide12.png";
-          }, 6000);          
-          return;
-        }
-        else if(i===11){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide12.png";         
-          return;
-        }
-        else if(i===18){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide12.png";//pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 25000);          
-          return;
-        }
-        else if(i===20){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
+  <script>
+    function OnJoystickControlled(strPara){
+      var btn_info = strPara.split(',')[4];
 
-            document.pic1.src="images/Slide" + i + ".gif";
-            pic1.style.visibility="visible";
-          }, 10000);  
-          return
-        }
-        else if(i===21){
-          PlaySpeech(speech[i]);//var pic=
-          document.pic1.src="images/Slide3.png";
-          setTimeout(function() {
-            document.pic1.src="images/Slide21.png";
-          }, 21000);
-          setTimeout(function() {
-            document.pic1.src="images/Slide9.png";
-          }, 55000);  
-          return
-        }
-        else if(i===22){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 3000);          
-          return;
-        }
-        /*else if(i===23){
-          PlaySpeech(speech[i]);//var pic=
-          pic1.style.visibility = "hidden";
-          setTimeout(function() {
-            pic1.style.visibility="visible";
-            document.pic1.src="images/Slide" + i + ".png";
-          }, 3000);          
-          return;
-        }*/
-
-        
-        document.pic1.src="images/Slide" + i + ".png";
-        //alert(i);
-        PlaySpeech(speech[i]);   
+      if(btn_info[0] == '4'){
+        window.external.ChangeLanguage("en-us");
+        SetVolume(1);
+        window.external.PlaySpeech("Hello John, Brian and Team....Allow me to help you get disruptive! ");
+      }
     }
-    </script>
+  </script>
 </body>
 </html>
